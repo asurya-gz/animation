@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animasi CSS Gradient</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gr: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+        --gr2: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+      }
+      body {
+        min-height: 100vh;
+        background-color: #eaeaea;
+        background-color: #8bc6ec;
+        background-color: #ff3cac;
+        background-image: linear-gradient(
+          225deg,
+          #ff3cac 0%,
+          #784ba0 50%,
+          #2b86c5 100%
+        );
+        background-size: 200%;
+        animation: animate-bg 10s infinite alternate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        background-size: 200%;
+        font-size: 5rem;
+        text-align: center;
+        font-family: "Lilita One", cursive;
+        background-image: var(--gr2);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
+        animation: animate-bg 5s infinite alternate;
+      }
+
+      @keyframes animate-bg {
+        0% {
+          background-position: left;
+        }
+        100% {
+          background-position: right;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Agung Surya Permana.</h1>
+  </body>
+</html>
